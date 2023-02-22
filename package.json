@@ -2,7 +2,7 @@
   "author": {
     "name": "Jim Manton"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bundleDependencies": [],
   "dependencies": {
     "@types/node": "^18.11.19",
@@ -39,6 +39,6 @@
   "email": "jrman@risebroadband.net",
   "license": "MIT",
   "main": "app.js",
-  "name": "log",
+  "name": "log-queue",
   "start": "node app.js"
 }
