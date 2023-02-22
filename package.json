@@ -24,18 +24,15 @@
     "console",
     "appenders",
     "javascript",
-    "synchronous",
-    "objects",
-    "promises",
     "mocha"
   ],
-  "homepage": "https://github.com/jman717/file-obj-queue",
+  "homepage": "https://github.com/jman717/log",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jman717/file-obj-queue.git"
+    "url": "git+https://github.com/jman717/log.git"
   },
   "deprecated": false,
-  "description": "Logging",
+  "description": "Logging to console with eventual log4js-tagline support.",
   "email": "jrman@risebroadband.net",
   "license": "MIT",
   "main": "app.js",
