@@ -6,7 +6,7 @@ const packageMock = {
   "author": {
     "name": "Jim Manton"
   },
-  "version": "2.0.4",
+  "version": "1.0.0",
   "bundleDependencies": [],
   "dependencies": {
     "@types/node": "^18.11.19",
@@ -15,38 +15,32 @@ const packageMock = {
     "diffler": "^2.0.4",
     "fs": "^0.0.1-security",
     "mocha": "^10.2.0",
-    "queuejson": "^9.0.11",
-    "typescript": "^4.9.5",
     "valid-path": "^2.1.0"
   },
   "scripts": {
     "start": "node app.ts",
     "test": "mocha",
     "ditched": "ditched -a",
-    "test_files": "node ./tests/files",
-    "test_all": "node ./tests/test_all"
+    "test_logs": "node ./tests/logs"
   },
   "keywords": [
-    "queue",
-    "processing",
+    "log",
+    "console",
     "appenders",
     "javascript",
-    "synchronous",
-    "objects",
-    "promises",
     "mocha"
   ],
-  "homepage": "https://github.com/jman717/file-obj-queue",
+  "homepage": "https://github.com/jman717/log",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jman717/file-obj-queue.git"
+    "url": "git+https://github.com/jman717/log.git"
   },
   "deprecated": false,
-  "description": "Queue File Objects",
+  "description": "Logging to console with eventual log4js-tagline support.",
   "email": "jrman@risebroadband.net",
   "license": "MIT",
   "main": "app.js",
-  "name": "file-obj-queue",
+  "name": "log-queue",
   "start": "node app.js"
 }
 

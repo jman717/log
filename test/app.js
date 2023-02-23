@@ -5,15 +5,15 @@ describe('app', function () {
 
     it('app.constructor should pass', function () {
         application = require('../app.js')
-        assert(app = new application())
+        assert(app = new application({ parent: null }))
     })
     
     it('app.logMsg is a function', function () {
         assert(typeof app.logMsg == 'function')
     })
         
-    it('app.getFileObject is a function', function () {
-        assert(typeof app.getFileObject == 'function')
+    it('app.init is a function', function () {
+        assert(typeof app.init == 'function')
     })
 })
 
@@ -21,17 +21,5 @@ describe('require', function () {
 
     it('colors', function () {
         assert(require('colors'))
-    })
-
-    it('base_queue', function () {
-        assert(require('../base_queue/app'))
-    })
-
-    it('fs', function () {
-        assert(require('fs'))
-    })
-    
-    it('valid-path', function () {
-        assert(require('valid-path'))
     })
 })
