@@ -1,6 +1,7 @@
 var llog = require("../app.js"),
-  a = new llog({ parent: null }),
-  b = new llog({ parent: null, exclude_logMsg: ["debug", "error"] })
+  a = new llog({ parent: null }).init({appender: "console"}),
+  b = new llog({ parent: null, 
+                  exclude_logMsg: ["debug", "error"] }).init({appender: "console"})
 
 
 a.logMsg({ msg: "hello world".debug, type: "debug" })

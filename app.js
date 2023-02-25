@@ -29,46 +29,42 @@ exports = module.exports = class LogQueue {
             t.exclude_logMsg = props.exclude_logMsg
             t.resolve = props.resolve
             t.reject = props.reject
+            t.appender = "console"
+            t.logObj = null
 
             t.init = t.init.bind(t)
             t.logMsg = t.logMsg.bind(t)
-            t.logMsg({ msg: `${fname}`.debug, type: 'debug' })
 
             return t
         } catch (e) {
             e.message = `${fname} error: ${e.message}`
+            console.log(e.message)
             throw (e)
         }
     }
 
-    init(props) {
-        var t = this, fname = `LogQueue.init`
+    init(props = {}) {
+        var t = this, fname = `LogQueue.init`, a, req
         try {
-            // t.base_queue = new base_queue({
-            //     parent: t,
-            //     relative_path: t.relative_path,
-            //     logMsg: t.logMsg,
-            //     resolve: t.resolve,
-            //     reject: t.reject
-            // }).load(props).process()
+            if (typeof props.appender != "undefined")
+                t.appender = props.appender
+            a = `./appenders/${t.appender}.js`
+            req = require(a)
+
+            t.logObj = new req({parent: t})
+
             return t
         } catch (e) {
             e.message = `${fname} error: ${e.message}`
+            console.log(e.message)
             throw (e)
         }
     }
 
     logMsg(props = {}) {
-        let t = this, fname = "log_queue.logMsg"
+        let t = this, fname = "LogQueue.logMsg"
         try {
-            if (typeof props.msg == "undefined")
-                throw new Error(`no msg property in (${JSON.stringify(props)}) `)
-            if (typeof props.type == "undefined")
-                throw new Error(`no type property in (${JSON.stringify(props)}) `)
-            if (typeof t.exclude_logMsg != "undefined")
-                if (t.exclude_logMsg.indexOf(props.type) > -1)
-                    return
-            console.log(props.msg)
+            t.logObj.logMsg(props)
         } catch (e) {
             e.message = `${fname} error: ${e.message}`
             console.log(e.message)
