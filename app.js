@@ -26,7 +26,7 @@ exports = module.exports = class LogQueue {
 
             t.parent = props.parent
             t.exclude_logMsg = props.exclude_logMsg
-            t.appender = "console"
+            t.appender = null
             t.logObj = null
 
             t.init = t.init.bind(t)
@@ -48,10 +48,9 @@ exports = module.exports = class LogQueue {
             a = `./appenders/${t.appender}.js`
             req = require(a)
 
-            t.logObj = new req({
-                parent: t,
-                exclude_logMsg: t.exclude_logMsg
-            })
+            props.parent = t
+            props.exclude_logMsg = t.exclude_logMsg
+            t.logObj = new req(props)
 
             return t
         } catch (e) {
