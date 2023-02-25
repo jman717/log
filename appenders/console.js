@@ -8,6 +8,7 @@ exports = module.exports = class _console {
         var t = this, fname = `console.constructor`
         try {
             t.parent = props.parent
+            t.exclude_logMsg = props.exclude_logMsg
             t.logMsg = t.logMsg.bind(t)
 
             return t
