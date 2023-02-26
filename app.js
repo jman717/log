@@ -50,6 +50,8 @@ exports = module.exports = class LogQueue {
 
             props.parent = t
             props.exclude_logMsg = t.exclude_logMsg
+            props.colors = colors   
+
             t.logObj = new req(props)
 
             return t
