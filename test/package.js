@@ -6,7 +6,7 @@ const packageMock = {
   "author": {
     "name": "Jim Manton"
   },
-  "version": "2.1.0",
+  "version": "3.0.0",
   "bundleDependencies": [],
   "dependencies": {
     "@types/node": "^18.11.19",
@@ -21,7 +21,8 @@ const packageMock = {
     "start": "node app.ts",
     "test": "mocha",
     "ditched": "ditched -a",
-    "test_logs": "node ./tests/logs"
+    "test_logs": "node ./tests/logs",
+    "test_http": "node ./tests/http"
   },
   "keywords": [
     "log",
@@ -45,6 +46,7 @@ const packageMock = {
   "name": "log-queue",
   "start": "node app.js"
 }
+
 
 describe('package.json', function () {
     it('should pass', function () {

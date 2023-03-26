@@ -72,4 +72,15 @@ exports = module.exports = class LogQueue {
             throw e
         }
     }
+
+    server(props = {}) {
+        let t = this, fname = "LogQueue.server"
+        try {
+            t.logObj.server(props)
+        } catch (e) {
+            e.message = `${fname} error: ${e.message}`
+            console.log(e.message)
+            throw e
+        }
+    }    
 }

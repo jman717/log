@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/log-queue.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/log-queue/)
 
-Logging mainly to console and log4js-tagline, but can certainly be used for generic logging. 
+Logging to console, log4js-tagline and http. 
 
 Mocha Test
 ---------
@@ -18,5 +18,6 @@ General Setup Test
 ---------
 ```
 npm run test_logs
+npm run test_http
 
 ```
