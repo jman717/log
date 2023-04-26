@@ -37,6 +37,7 @@ exports = module.exports = class log_http {
             t.output = []
             t.res = null
             t.req = null
+            t.exclude_logMsg = props.exclude_logMsg
 
             t.logMsg = t.logMsg.bind(t)
             t.server = t.server.bind(t)
@@ -51,6 +52,9 @@ exports = module.exports = class log_http {
     logMsg(props = {}) {
         let t = this, fname = "http.logMsg"
         try {
+            if (typeof t.exclude_logMsg != "undefined")
+                if (t.exclude_logMsg.indexOf(props.type) > -1)
+                    return
             t.output.push(`${JSON.stringify(props)}`)
         } catch (e) {
             e.message = `${fname} error: ${e.message}`
