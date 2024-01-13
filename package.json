@@ -2,11 +2,11 @@
   "author": {
     "name": "Jim Manton"
   },
-  "version": "3.0.1",
+  "version": "3.0.2",
   "bundleDependencies": [],
   "dependencies": {
-    "@types/node": "^18.11.19",
-    "chai": "^4.3.7",
+    "@types/node": "^20.11.0",
+    "chai": "^5.0.0",
     "colors": "^1.4.0",
     "diffler": "^2.0.4",
     "fs": "^0.0.1-security",
