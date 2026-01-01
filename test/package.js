@@ -2,19 +2,19 @@ const assert = require('assert'),
     jsonHasDifferences = require('diffler'),
     packagejson = require('../package.json')
 
-const packageMock = {
+const packageMock =   {
     "author": {
       "name": "Jim Manton"
     },
-    "version": "3.0.4",
+    "version": "3.0.5",
     "bundleDependencies": [],
     "dependencies": {
       "@types/node": "^20.11.0",
-      "chai": "^5.0.0",
+      "chai": "^5.3.3",
       "colors": "^1.4.0",
       "diffler": "^2.0.4",
       "fs": "^0.0.1-security",
-      "mocha": "^10.2.0",
+      "mocha": "^10.8.2",
       "valid-path": "^2.1.0"
     },
     "scripts": {
