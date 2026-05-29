@@ -8,12 +8,6 @@
 
 Logging to console, log4js-tagline and http. 
 
-Mocha Test
----------
-```
-npm test
-```
-
 General Setup Test
 ---------
 ```
