@@ -2,24 +2,18 @@
     "author": {
         "name": "Jim Manton"
     },
-    "version": "3.0.7",
+    "version": "3.0.8",
     "bundleDependencies": [],
     "dependencies": {
-        "@types/node": "^25.9.1",
-        "colors": "^1.4.0",
-        "fs": "^0.0.1-security",
-        "valid-path": "^2.1.0"
+        "colors": "^1.4.0"
     },
     "scripts": {
         "start": "node app.js",
-        "ditched": "ditched -a",
         "test_logs": "node ./tests/logs",
         "test_http": "node ./tests/http"
     },
     "keywords": [
         "log",
-        "console",
-        "log4js-tagline",
         "http",
         "base-queue",
         "appenders",
